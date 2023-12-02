@@ -1,0 +1,18 @@
+"""Задание
+
+Запишите вместо вопросительных знаков выражение, которое вернет True, если указывается високосный год, иначе False.
+Например, x = 2000 -> True; x = 1900 -> False; и т.д.
+
+"""def is_leap_year(x):
+    return ???"""
+
+
+def is_leap_year(x=2001):
+    return (x % 400 == 0) or ((x % 4 == 0) and (x % 100 != 0))
+
+# Проверка нескольких лет
+years_to_check = [2000, 2001, 2020, 2100, 2400]
+
+for year in years_to_check:
+    result = is_leap_year(year)
+    print(f"Год {year} является високосным: {result}")
